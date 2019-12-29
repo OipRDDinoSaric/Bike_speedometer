@@ -25,6 +25,7 @@ C_SRCS += \
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c \
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c \
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c 
 
 OBJS += \
@@ -49,6 +50,7 @@ OBJS += \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o \
+./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o 
 
 C_DEPS += \
@@ -73,6 +75,7 @@ C_DEPS += \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.d \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d \
+./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d \
 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.d 
 
 
@@ -81,7 +84,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/%.o: ../Drivers/STM32F4xx_HAL_Driver/Src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -I"C:/Users/PredatorBEAST/Desktop/PPIUS_Project_Measuring_speed_with_HAL_sensor/Inc" -I"C:/Users/PredatorBEAST/Desktop/PPIUS_Project_Measuring_speed_with_HAL_sensor/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/PredatorBEAST/Desktop/PPIUS_Project_Measuring_speed_with_HAL_sensor/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/PredatorBEAST/Desktop/PPIUS_Project_Measuring_speed_with_HAL_sensor/Middlewares/ST/STM32_USB_Host_Library/Core/Inc" -I"C:/Users/PredatorBEAST/Desktop/PPIUS_Project_Measuring_speed_with_HAL_sensor/Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc" -I"C:/Users/PredatorBEAST/Desktop/PPIUS_Project_Measuring_speed_with_HAL_sensor/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/PredatorBEAST/Desktop/PPIUS_Project_Measuring_speed_with_HAL_sensor/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -I"C:/Users/PredatorBEAST/Desktop/9. Semestar/Programska potpora industrijskih ugradbenih sustava/Projekt/git/Bike_speedometer/Inc" -I"C:/Users/PredatorBEAST/Desktop/9. Semestar/Programska potpora industrijskih ugradbenih sustava/Projekt/git/Bike_speedometer/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/Users/PredatorBEAST/Desktop/9. Semestar/Programska potpora industrijskih ugradbenih sustava/Projekt/git/Bike_speedometer/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"C:/Users/PredatorBEAST/Desktop/9. Semestar/Programska potpora industrijskih ugradbenih sustava/Projekt/git/Bike_speedometer/Middlewares/ST/STM32_USB_Host_Library/Core/Inc" -I"C:/Users/PredatorBEAST/Desktop/9. Semestar/Programska potpora industrijskih ugradbenih sustava/Projekt/git/Bike_speedometer/Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc" -I"C:/Users/PredatorBEAST/Desktop/9. Semestar/Programska potpora industrijskih ugradbenih sustava/Projekt/git/Bike_speedometer/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/PredatorBEAST/Desktop/9. Semestar/Programska potpora industrijskih ugradbenih sustava/Projekt/git/Bike_speedometer/Drivers/CMSIS/Include" -I"C:/Users/PredatorBEAST/Desktop/9. Semestar/Programska potpora industrijskih ugradbenih sustava/Projekt/git/Bike_speedometer/Middlewares/Third_Party/FreeRTOS/Source/include" -I"C:/Users/PredatorBEAST/Desktop/9. Semestar/Programska potpora industrijskih ugradbenih sustava/Projekt/git/Bike_speedometer/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2" -I"C:/Users/PredatorBEAST/Desktop/9. Semestar/Programska potpora industrijskih ugradbenih sustava/Projekt/git/Bike_speedometer/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
