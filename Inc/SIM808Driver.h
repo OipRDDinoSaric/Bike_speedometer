@@ -1,5 +1,4 @@
 #include "main.h"
-#include "cmsis_os.h"
 #include <string.h>
 
 extern UART_HandleTypeDef huart2;
@@ -32,3 +31,4 @@ SIM808Status SIM808_SetEchoOff (uint32_t timeout_ms);
 SIM808Status SIM808_SetPowerSaving (uint32_t timeout_ms);
 SIM808Status SIM808_Dial(uint32_t timeout_ms);
 SIM808Status SIM808_SendSMS (uint32_t timeout_ms, char* msg);
+SIM808Status SIM808_SetGNSSOn (uint32_t timeout_ms);

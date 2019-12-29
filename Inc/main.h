@@ -33,12 +33,10 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdint.h>
-#include "cmsis_os.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-extern osSemaphoreId_t SIM808_Sem_rxHandle;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
