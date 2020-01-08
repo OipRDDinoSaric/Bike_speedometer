@@ -1,0 +1,9 @@
+Debug/
+
+*.project
+*.cproject
+
+*.bin
+*.elf
+
+*.o

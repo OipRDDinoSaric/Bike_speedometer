@@ -27,6 +27,8 @@
 extern "C" {
 #endif
 
+#include<inttypes.h>
+
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 
