@@ -150,7 +150,6 @@ int main (void)
 			case 1:
 			{
 				// Device is armed and sends an SMS message every 2 minutes
-//				HAL_TIM_IC_Stop_IT ( & htim2, TIM_CHANNEL_2);
 
 //				SIM808_SendSMS(10 * 1000, "Your bike is on the move!"); // TODO uncomment
 				SIM808_Dial (5 * 1000); // TODO - remove. For demonstration!
