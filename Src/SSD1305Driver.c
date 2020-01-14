@@ -5,7 +5,7 @@ void SSD1305_DisplaySpeed (int speed)
 	char buffer[10];
 	ssd1306_Fill (Black);
 	ssd1306_SetCursor (2, 0);
-	ssd1306_WriteString ("Velocity: ", Font_11x18, White);
+	ssd1306_WriteString ("Speed: ", Font_11x18, White);
 	ssd1306_SetCursor (2, 18);
 	itoa (speed, buffer, 10);
 	strlcat (buffer, " kmph", 10);

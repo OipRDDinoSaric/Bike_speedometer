@@ -1,7 +1,7 @@
 #include "SIM808Driver.h"
 
 // enter phone number you want to contact
-const char* GSM_contact = "0989230034";
+const char* GSM_contact = "xxxxxx";
 
 SIM808Driver SIM808Handle;
 volatile uint8_t SIM808_rx_byte;
